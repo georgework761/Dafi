@@ -1,0 +1,6 @@
+framework module Pods_CricketDafa {
+  umbrella header "Pods-CricketDafa-umbrella.h"
+
+  export *
+  module * { export * }
+}
