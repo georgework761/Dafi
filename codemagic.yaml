@@ -7,13 +7,15 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.CricketDafi
+        bundle_identifier: "com.CricketDafi" # <-- Основной бандл
       vars:
         BUNDLE_ID: "com.CricketDafi"
-        XCODE_WORKSPACE: "CricketDafa.xcworkspace" # <-- Put the name of your Xcode workspace here
-        XCODE_SCHEME: "CricketDafa" # <-- Put the name of your Xcode scheme here
-        APP_STORE_APPLE_ID: 6743764129
-      xcode: 16
+        PUSH_BUNDLE_ID: "com.CricketDafi.notificationsvc"
+        XCODE_WORKSPACE: "CricketDafa.xcworkspace"
+        XCODE_SCHEME: "CricketDafa"
+        PUSH_TARGET_SCHEME: "notificationsvc"
+        APP_STORE_APPLE_ID: 6743764129 # <-- Укажи правильный ID
+      xcode: 16.0
     scripts:
       - name: Set up provisioning profiles settings on Xcode project
         script: xcode-project use-profiles
@@ -21,12 +23,21 @@ workflows:
         script: |
           cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-      - name: Build ipa for distribution
+          echo "Latest uploaded build number: $LATEST_BUILD_NUMBER"
+          NEW_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+          echo "Setting new build number: $NEW_BUILD_NUMBER"
+          agvtool new-version -all $NEW_BUILD_NUMBER
+          
+      - name: Build ipa for distribution (Main App)
         script: |
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
+      - name: Build ipa for Push Notifications target
+        script: |
+          xcode-project build-ipa \
+            --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
+            --scheme "$PUSH_TARGET_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
@@ -35,15 +46,11 @@ workflows:
     publishing:
       email:
         recipients:
-          - e@gmail.com
+          - eldigo02@gmail.com # <-- Замени на свою почту
         notify:
           success: true
           failure: false
       app_store_connect:
         auth: integration
-        # Configuration related to TestFlight (optional)
-        # Note: This action is performed during post-processing.
         submit_to_testflight: false
-        # Configuration related to App Store (optional)
-        # Note: This action is performed during post-processing.
         submit_to_app_store: false
