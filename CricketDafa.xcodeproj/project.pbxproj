@@ -35,7 +35,37 @@
 		646D283C2D92BEFE00A21509 /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D283B2D92BEFE00A21509 /* TipCell.swift */; };
 		646D283F2D92CD6100A21509 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D283E2D92CD6100A21509 /* SettingsView.swift */; };
 		646D28422D92CD6C00A21509 /* NotifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D28412D92CD6C00A21509 /* NotifView.swift */; };
+		646D28472D95686000A21509 /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 646D28462D95686000A21509 /* SdkPushExpress */; };
+		646D284A2D95686900A21509 /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 646D28492D95686900A21509 /* FlagsmithClient */; };
+		646D28532D95695E00A21509 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D28522D95695E00A21509 /* NotificationService.swift */; };
+		646D28572D95695E00A21509 /* notificationsvc.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 646D28502D95695E00A21509 /* notificationsvc.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		646D285D2D95696900A21509 /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 646D285C2D95696900A21509 /* SdkPushExpress */; };
+		646D28602D95704600A21509 /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D285F2D95704600A21509 /* InitView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		646D28552D95695E00A21509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 646D27E62D8CB51D00A21509 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 646D284F2D95695E00A21509;
+			remoteInfo = notificationsvc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		646D285B2D95695E00A21509 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				646D28572D95695E00A21509 /* notificationsvc.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27317E7F86D9C3CE4A0FD347 /* Pods-CricketDafa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricketDafa.debug.xcconfig"; path = "Target Support Files/Pods-CricketDafa/Pods-CricketDafa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +98,11 @@
 		646D283B2D92BEFE00A21509 /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
 		646D283E2D92CD6100A21509 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		646D28412D92CD6C00A21509 /* NotifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifView.swift; sourceTree = "<group>"; };
+		646D284B2D95694A00A21509 /* CricketDafa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CricketDafa.entitlements; sourceTree = "<group>"; };
+		646D28502D95695E00A21509 /* notificationsvc.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationsvc.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		646D28522D95695E00A21509 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		646D28542D95695E00A21509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		646D285F2D95704600A21509 /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		8FA403954D9D2D8B414D46C4 /* Pods_CricketDafa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CricketDafa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A391B287B3FDE6432A6367 /* Pods-CricketDafa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricketDafa.release.xcconfig"; path = "Target Support Files/Pods-CricketDafa/Pods-CricketDafa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +112,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646D284A2D95686900A21509 /* FlagsmithClient in Frameworks */,
+				646D28472D95686000A21509 /* SdkPushExpress in Frameworks */,
 				2A829142EBFC38E0254E5500 /* Pods_CricketDafa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646D284D2D95695E00A21509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646D285D2D95696900A21509 /* SdkPushExpress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				646D27F02D8CB51D00A21509 /* CricketDafa */,
+				646D28512D95695E00A21509 /* notificationsvc */,
 				646D27EF2D8CB51D00A21509 /* Products */,
 				B0D1D6DE8D9A3BD8ABB69761 /* Pods */,
 				FA80140FC17D3335E1E0E9AC /* Frameworks */,
@@ -98,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				646D27EE2D8CB51D00A21509 /* CricketDafa.app */,
+				646D28502D95695E00A21509 /* notificationsvc.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +152,8 @@
 		646D27F02D8CB51D00A21509 /* CricketDafa */ = {
 			isa = PBXGroup;
 			children = (
+				646D285E2D95703E00A21509 /* Init */,
+				646D284B2D95694A00A21509 /* CricketDafa.entitlements */,
 				646D28402D92CD6400A21509 /* Notif */,
 				646D283D2D92CD5700A21509 /* Settings */,
 				646D28362D92B41700A21509 /* Model */,
@@ -257,6 +306,23 @@
 			path = Notif;
 			sourceTree = "<group>";
 		};
+		646D28512D95695E00A21509 /* notificationsvc */ = {
+			isa = PBXGroup;
+			children = (
+				646D28522D95695E00A21509 /* NotificationService.swift */,
+				646D28542D95695E00A21509 /* Info.plist */,
+			);
+			path = notificationsvc;
+			sourceTree = "<group>";
+		};
+		646D285E2D95703E00A21509 /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				646D285F2D95704600A21509 /* InitView.swift */,
+			);
+			path = Init;
+			sourceTree = "<group>";
+		};
 		B0D1D6DE8D9A3BD8ABB69761 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,15 +352,41 @@
 				646D27EB2D8CB51D00A21509 /* Frameworks */,
 				646D27EC2D8CB51D00A21509 /* Resources */,
 				4ECA22DF6BBA4149CF426DAC /* [CP] Embed Pods Frameworks */,
+				646D285B2D95695E00A21509 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				646D28562D95695E00A21509 /* PBXTargetDependency */,
+			);
+			name = CricketDafa;
+			packageProductDependencies = (
+				646D28462D95686000A21509 /* SdkPushExpress */,
+				646D28492D95686900A21509 /* FlagsmithClient */,
+			);
+			productName = CricketDafa;
+			productReference = 646D27EE2D8CB51D00A21509 /* CricketDafa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		646D284F2D95695E00A21509 /* notificationsvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 646D28582D95695E00A21509 /* Build configuration list for PBXNativeTarget "notificationsvc" */;
+			buildPhases = (
+				646D284C2D95695E00A21509 /* Sources */,
+				646D284D2D95695E00A21509 /* Frameworks */,
+				646D284E2D95695E00A21509 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CricketDafa;
-			productName = CricketDafa;
-			productReference = 646D27EE2D8CB51D00A21509 /* CricketDafa.app */;
-			productType = "com.apple.product-type.application";
+			name = notificationsvc;
+			packageProductDependencies = (
+				646D285C2D95696900A21509 /* SdkPushExpress */,
+			);
+			productName = notificationsvc;
+			productReference = 646D28502D95695E00A21509 /* notificationsvc.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -309,6 +401,9 @@
 					646D27ED2D8CB51D00A21509 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					646D284F2D95695E00A21509 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 646D27E92D8CB51D00A21509 /* Build configuration list for PBXProject "CricketDafa" */;
@@ -320,11 +415,16 @@
 				Base,
 			);
 			mainGroup = 646D27E52D8CB51D00A21509;
+			packageReferences = (
+				646D28452D95686000A21509 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */,
+				646D28482D95686900A21509 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+			);
 			productRefGroup = 646D27EF2D8CB51D00A21509 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				646D27ED2D8CB51D00A21509 /* CricketDafa */,
+				646D284F2D95695E00A21509 /* notificationsvc */,
 			);
 		};
 /* End PBXProject section */
@@ -338,6 +438,13 @@
 				646D27FB2D8CB51F00A21509 /* Assets.xcassets in Resources */,
 				646D27FE2D8CB51F00A21509 /* Base in Resources */,
 				646D27F92D8CB51D00A21509 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646D284E2D95695E00A21509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +513,7 @@
 				646D282D2D91736300A21509 /* TrainigsDetailView.swift in Sources */,
 				646D281B2D8EFA4100A21509 /* TipsView.swift in Sources */,
 				646D28182D8EFA3600A21509 /* TrainigsView.swift in Sources */,
+				646D28602D95704600A21509 /* InitView.swift in Sources */,
 				646D28152D8EF65A00A21509 /* ChallangeView.swift in Sources */,
 				646D280B2D8D76FD00A21509 /* OnboardingView.swift in Sources */,
 				646D28382D92B41E00A21509 /* Model.swift in Sources */,
@@ -416,7 +524,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		646D284C2D95695E00A21509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646D28532D95695E00A21509 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		646D28562D95695E00A21509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 646D284F2D95695E00A21509 /* notificationsvc */;
+			targetProxy = 646D28552D95695E00A21509 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		646D27F72D8CB51D00A21509 /* Main.storyboard */ = {
@@ -561,14 +685,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27317E7F86D9C3CE4A0FD347 /* Pods-CricketDafa.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CricketDafa/CricketDafa.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CricketDafa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dafa Cricket Master";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -579,7 +706,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CricketDafi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -597,14 +724,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7A391B287B3FDE6432A6367 /* Pods-CricketDafa.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CricketDafa/CricketDafa.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CricketDafa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dafa Cricket Master";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -615,7 +745,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CricketDafi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -626,6 +756,56 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		646D28592D95695E00A21509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CricketDafi.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		646D285A2D95695E00A21509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CricketDafi.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -650,7 +830,53 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		646D28582D95695E00A21509 /* Build configuration list for PBXNativeTarget "notificationsvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				646D28592D95695E00A21509 /* Debug */,
+				646D285A2D95695E00A21509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		646D28452D95686000A21509 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pushexpress/pushexpress-swift-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		646D28482D95686900A21509 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		646D28462D95686000A21509 /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646D28452D95686000A21509 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+		646D28492D95686900A21509 /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646D28482D95686900A21509 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
+		};
+		646D285C2D95696900A21509 /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646D28452D95686000A21509 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 646D27E62D8CB51D00A21509 /* Project object */;
 }
